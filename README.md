@@ -27,13 +27,13 @@ Depending on how to manage your development process, an ideal process would be a
 		- Enable and disable on required constants
 		- All new functions should be commented and documented in the following fashion
 *		/**
-*		* @function get_taxonomy_class( $var )
-*		* @param type $var
-*		* @staticvar $term 
-*		* @uses get_queried_object()
-*		* @see http://codex.wordpress.org/Function_Reference/get_queried_object
-*		* @return string
-*		*/
+		* @function get_taxonomy_class( $var )
+		* @param type $var
+		* @staticvar $term 
+		* @uses get_queried_object()
+		* @see http://codex.wordpress.org/Function_Reference/get_queried_object
+		* @return string
+		*/
 
 ***Affinity New Media Bones Boilerplate Updates*** 
 
