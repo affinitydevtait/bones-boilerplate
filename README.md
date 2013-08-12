@@ -1,5 +1,11 @@
-bones-boilerplate
+
+Development Standards Boilerplate
 =================
+Built around the HTML5 Boilerplate, the Affinity NEw MEdia is a rock to start from. Keep what you need, remove what you don't. It's totally up to you.
+The whole idea around this Boilerplate was to be consistent with development and to have a framework style theme to start any new project with.
+ It's meant to be used as a per-project template, this means no Child Themes. Taking the Mobile-First approach is the way to go when building a responsive project. 
+So our boilerplate comes ready to roll with a unique LESS/Sass setup that serves minimal resources to smaller screens and scales up depending on your viewport. 
+As anyone who's ever browsed on a 3G connection will tell you, it's a difference maker.
 
 Affinity New Media Bones Boilerplate
 
@@ -29,13 +35,6 @@ Affinity New Media Bones Boilerplate
  * - .transparent()
  * - .desaturate()
  * - .saturate()
-
-
-Development Standards using the Boilerplate
-=================
-Built around the HTML5 Boilerplate, the Affinity NEw MEdia is a rock to start from. Keep what you need, remove what you don't. It's totally up to you.
-The whole idea around this Boilerplate was to be consistent with development and to have a framework style theme to start any new project with.
-
 
 What is Bones
 =================
