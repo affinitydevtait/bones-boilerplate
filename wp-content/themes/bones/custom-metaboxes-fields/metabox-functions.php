@@ -11,6 +11,10 @@
  * @link https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress/wiki/Field-Types
  */
 
+function include_init_file() {
+    require_once 'custom-metaboxes-fields/init.php';
+}
+
 add_filter( 'cmb_meta_boxes', 'cmb_sample_metaboxes' );
 /**
  * Define the metabox and field configurations.

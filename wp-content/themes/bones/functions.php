@@ -50,7 +50,8 @@ require_once('library/functions/pagination-functions.php'); // you can disable t
 	- trim_text()
 	- current_url() //Deprecated with get_current_url() but still available
 	- limit_characters()
- 
+    - wph_right_now_content_table_end()
+    - df_disable_admin_bar()
  */
 require_once('library/functions/boilerplate-functions.php'); 
 
@@ -131,13 +132,30 @@ custom-metaboxes-fields/metabox-functions.php (Added in version 2.1 boilerplate 
 	- Image/file upload
 	- oEmbed
 */
-/************* LOAD INIT FILE *****************/
-function include_init_file() {
-    require_once 'custom-metaboxes-fields/init.php';
-}
-// relevant functions
 require_once('custom-metaboxes-fields/metabox-functions.php'); // you can disable this if you like
 
+/*
+library/functions/sidebar-functions.php
+	- Place all actyive sidebars
+*/
+require_once('library/functions/sidebar-functions.php'); 
+
+/*
+library/functions/bones-functions.php
+	- Native Bones Functions
+*/
+require_once('library/functions/bones-functions.php'); 
+
+/*
+library/functions/custom-functions.php
+	- Place any custom functions here
+*/
+require_once('library/functions/custom-functions.php'); 
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////HOOKS AND IMAGE SIZES///////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /******************* ADD HOOKS ********************/
 /* Metabox hook */
@@ -161,6 +179,8 @@ add_action('init', 'remove_header_info'); // remove unnecessary header info
 /* Disable Admin Tool Bar */
 add_action('init','df_disable_admin_bar');
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 
@@ -195,203 +215,7 @@ bt_add_image_size( 'custom-top', 981, 330, array( 'center', 'top' ) );
 bt_add_image_size( 'custom-center', 982, 330, array( 'center', 'center' ) );
 bt_add_image_size( 'custom-bottom', 979, 330, array( 'center', 'bottom' ) );
 
-/************* ACTIVE SIDEBARS ********************/
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Sidebars & Widgetizes Areas
-function bones_register_sidebars() {
-	register_sidebar(array(
-		'id' => 'sidebar1',
-		'name' => __('Sidebar 1', 'bonestheme'),
-		'description' => __('The first (primary) sidebar.', 'bonestheme'),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-
-	/*
-	to add more sidebars or widgetized areas, just copy
-	and edit the above sidebar code. In order to call
-	your new sidebar just use the following code:
-
-	Just change the name to whatever your new
-	sidebar's id is, for example:
-
-	register_sidebar(array(
-		'id' => 'sidebar2',
-		'name' => __('Sidebar 2', 'bonestheme'),
-		'description' => __('The second (secondary) sidebar.', 'bonestheme'),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-
-	To call the sidebar in your template, you can just copy
-	the sidebar.php file and rename it to your sidebar's name.
-	So using the above example, it would be:
-	sidebar-sidebar2.php
-
-	*/
-} // don't remove this bracket!
-
-/************* DISABLE ADMIN BAR *********************/
-
-if (!function_exists('df_disable_admin_bar')) {
-	
-	function df_disable_admin_bar() {
-		
-		// for the admin page
-		remove_action('admin_footer', 'wp_admin_bar_render', 1000);
-		// for the front-end
-		remove_action('wp_footer', 'wp_admin_bar_render', 1000);
-	  	
-		// css override for the admin page
-		function remove_admin_bar_style_backend() { 
-			echo '<style>body.admin-bar #wpcontent, body.admin-bar #adminmenu { padding-top: 0px !important; }</style>';
-		}	  
-		add_filter('admin_head','remove_admin_bar_style_backend');
-		
-		// css override for the frontend
-		function remove_admin_bar_style_frontend() {
-			echo '<style type="text/css" media="screen">
-			html { margin-top: 0px !important; }
-			* html body { margin-top: 0px !important; }
-			</style>';
-		}
-		add_filter('wp_head','remove_admin_bar_style_frontend', 99);
-  	}
-}
-
-/************* COMMENT LAYOUT *********************/
-
-// Comment Layout
-function bones_comments($comment, $args, $depth) {
-   $GLOBALS['comment'] = $comment; ?>
-	<li <?php comment_class(); ?>>
-		<article id="comment-<?php comment_ID(); ?>" class="clearfix">
-			<header class="comment-author vcard">
-				<?php
-				/*
-					this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
-					echo get_avatar($comment,$size='32',$default='<path_to_url>' );
-				*/
-				?>
-				<!-- custom gravatar call -->
-				<?php
-					// create variable
-					$bgauthemail = get_comment_author_email();
-				?>
-				<img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5($bgauthemail); ?>?s=32" class="load-gravatar avatar avatar-48 photo" height="32" width="32" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
-				<!-- end custom gravatar call -->
-				<?php printf(__('<cite class="fn">%s</cite>', 'bonestheme'), get_comment_author_link()) ?>
-				<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__('F jS, Y', 'bonestheme')); ?> </a></time>
-				<?php edit_comment_link(__('(Edit)', 'bonestheme'),'  ','') ?>
-			</header>
-			<?php if ($comment->comment_approved == '0') : ?>
-				<div class="alert alert-info">
-					<p><?php _e('Your comment is awaiting moderation.', 'bonestheme') ?></p>
-				</div>
-			<?php endif; ?>
-			<section class="comment_content clearfix">
-				<?php comment_text() ?>
-			</section>
-			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-		</article>
-	<!-- </li> is added by WordPress automatically -->
-<?php
-} // don't remove this bracket!
-
-/************* SEARCH FORM LAYOUT *****************/
-
-// Search Form
-function bones_wpsearch($form) {
-	$form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-	<label class="screen-reader-text" for="s">' . __('Search for:', 'bonestheme') . '</label>
-	<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('Search the Site...','bonestheme').'" />
-	<input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
-	</form>';
-	return $form;
-} // don't remove this bracket!
-
-/************* ALL SETTINGS *****************/
-// CUSTOM ADMIN MENU LINK FOR ALL SETTINGS
-   function all_settings_link() {
-    add_options_page(__('All Settings'), __('All Settings'), 'administrator', 'options.php');
-   }
-   
-/************* RIGHT NOW MOD *****************/
-// ADD CUSTOM POST TYPES TO THE 'RIGHT NOW' DASHBOARD WIDGET
-function wph_right_now_content_table_end() {
-	$args = array(
-	 'public' => true ,
-	 '_builtin' => false
-	);
-	
-	$output = 'object';
-	$operator = 'and';
-	$post_types = get_post_types( $args , $output , $operator );
-	
-	foreach( $post_types as $post_type ) {
-		
-		$num_posts = wp_count_posts( $post_type->name );
-		$num = number_format_i18n( $num_posts->publish );
-		$text = _n( $post_type->labels->singular_name, $post_type->labels->name , intval( $num_posts->publish ) );
-		
-		if ( current_user_can( 'edit_posts' ) ) {
-			$num = "<a href='edit.php?post_type=$post_type->name'>$num</a>";
-			$text = "<a href='edit.php?post_type=$post_type->name'>$text</a>";
-		}
-		
-		echo '<tr><td class="first num b b-' . $post_type->name . '">' . $num . '</td>';
-		echo '<td class="text t ' . $post_type->name . '">' . $text . '</td></tr>';
-		
-	}
-	
-	$taxonomies = get_taxonomies( $args , $output , $operator ); 
-	
-	foreach( $taxonomies as $taxonomy ) {
-		
-		$num_terms  = wp_count_terms( $taxonomy->name );
-		$num = number_format_i18n( $num_terms );
-		$text = _n( $taxonomy->labels->singular_name, $taxonomy->labels->name , intval( $num_terms ));
-		
-		if ( current_user_can( 'manage_categories' ) ) {
-			$num = "<a href='edit-tags.php?taxonomy=$taxonomy->name'>$num</a>";
-			$text = "<a href='edit-tags.php?taxonomy=$taxonomy->name'>$text</a>";
-		}
-		
-		echo '<tr><td class="first b b-' . $taxonomy->name . '">' . $num . '</td>';
-		echo '<td class="t ' . $taxonomy->name . '">' . $text . '</td></tr>';
-	}
-}
-
-
-
-/************* CUSTOM FUNCTIONS *****************/
-
-function my_custom_logo() {
-	echo '
-		<style type="text/css">
-			#header-logo { background-image: url(' . get_bloginfo('template_directory') . '/library/images/custom-logo.gif) !important; }
-		</style>
-	';
-}
-
-// remove unnecessary header info
-function remove_header_info() {
-    remove_action('wp_head', 'rsd_link');
-    remove_action('wp_head', 'wlwmanifest_link');
-    remove_action('wp_head', 'wp_generator');
-    remove_action('wp_head', 'start_post_rel_link');
-    remove_action('wp_head', 'index_rel_link');
-    remove_action('wp_head', 'adjacent_posts_rel_link');         // for WordPress <  3.0
-    remove_action('wp_head', 'adjacent_posts_rel_link_wp_head'); // for WordPress >= 3.0
-}
-
-function add_googleanalytics() {
-	// Paste your Google Analytics code
-}
-
-// Some more functions.....
 ?>
