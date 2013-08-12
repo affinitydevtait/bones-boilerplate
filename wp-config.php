@@ -158,7 +158,7 @@ if($_SERVER['HTTP_HOST'] == 'localhost') {
 	define('DB_NAME', 'DB_NAME');
 	define('DB_USER', 'DB_USER');
 	define('DB_PASSWORD', 'DB_PASSWORD'); //generate @ http://strongpasswordgenerator.com/
-	define('DB_HOST', '10.56.75.142');
+	define('DB_HOST', 'localhost');
 	define('WP_HOME', 'http://dev9.affinitynewmedia.com/boilerplate');
 	define('WP_SITEURL', 'http://dev9.affinitynewmedia.com/boilerplate');
 
@@ -168,7 +168,7 @@ if($_SERVER['HTTP_HOST'] == 'localhost') {
 	define('DB_NAME', '');
 	define('DB_USER', '');
 	define('DB_PASSWORD', '');
-	define('DB_HOST', '10.56.75.142');
+	define('DB_HOST', 'localhost');
 	define('WP_HOME', '');
 	define('WP_SITEURL', '');
 }
