@@ -3,13 +3,44 @@ bones-boilerplate
 
 Affinity New Media Bones Boilerplate
 
+/* v3.01 update */
+- Added new LESS elements and removed elements from _mixins.less
+ * ADDED TO _elements.less
+ * - .gradient()
+ * - .bw-gradient()
+ * - .bordered()
+ * - .drop-shadow()
+ * - .rounded()
+ * - .border-radius()
+ * - .opacity()
+ * - .transition-duration()
+ * - .transform()
+ * - .rotation()
+ * - .scale()
+ * - .transition()
+ * - .inner-shadow()
+ * - .box-shadow()
+ * - .box-sizing()
+ * - .user-select()
+ * - .columns()
+ * - .translate()
+ * - .background-clip()
+ * ADDITIONS TO _elements.less
+ * - .transparent()
+ * - .desaturate()
+ * - .saturate()
+
+
+Development Standards using the Boilerplate
+=================
+Built around the HTML5 Boilerplate, the Affinity NEw MEdia is a rock to start from. Keep what you need, remove what you don't. It's totally up to you.
+The whole idea around this Boilerplate was to be consistent with development and to have a framework style theme to start any new project with.
 
 
 What is Bones
 =================
-/******************************************************************
-Bones
-A Lightweight Wordpress Development Theme
+
+Bones is a Lightweight Wordpress Development Theme
 
 _______________________________________________________________
 HEADS UP!!!
