@@ -48,7 +48,8 @@ Depending on how to manage your development process, an ideal process would be a
 	- Update Theme screenshot.png
 	- Generate favicon.ico (Find favicon.png for edit)
 
-***Boilerplate Updates*** 
+Boilerplate Updates
+=================
 
 /* v3.01 update */
 - Wordpress CMS 3.6 package
