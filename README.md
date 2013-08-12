@@ -2,7 +2,7 @@
 Development Standards Boilerplate
 =================
 Built around the HTML5 Boilerplate, the Affinity NEw MEdia is a rock to start from. Keep what you need, remove what you don't. It's totally up to you.
-The whole idea around this Boilerplate was to be consistent with development and to have a framework style theme to start any new project with.
+**The whole idea around this Boilerplate is to be consistent and tidy with development** and to have a framework style theme to start any new project with. So keep your code clean & tidy and place code into the correct areas of the boilerplate, see below for documentation.
  It's meant to be used as a per-project template, this means no Child Themes. Taking the Mobile-First approach is the way to go when building a responsive project. 
 So our boilerplate comes ready to roll with a unique LESS/Sass setup that serves minimal resources to smaller screens and scales up depending on your viewport. 
 As anyone who's ever browsed on a 3G connection will tell you, it's a difference maker.
@@ -12,14 +12,19 @@ As anyone who's ever browsed on a 3G connection will tell you, it's a difference
 Depending on how to manage your development process, an ideal process would be as follows:
 
 - **Build Stage**
-	Create all your HTML and CSS. As The boilerplate is based on the HTML 5 Boilerplate
-	make sure that you use all HTML 5 elemnts and standards throughout your project.
-	For a reference you could use http://html5doctor.com
+	- Create all your HTML and CSS. As The boilerplate is based on the HTML 5 Boilerplate make sure that you use all HTML 5 elemnts and standards throughout your project.
+	  For a reference you could use http://html5doctor.com
 
-	Also the Boilerplate uses LESS / SASS, we default to LESS, so all your default LESS
-	styling should only ever go in the _1030up.less the desktop only version of the website
+	- Also the Boilerplate uses LESS / SASS, we default to LESS, so all your default LESS styling should only ever go in the _1030up.less the desktop only version of the website.
 
+	- There are a number of LESS elements you can use to achieve the styling you desire, so keep to using them so no duplicate code is used.
 
+	- Make all your build files html files only (no using PHP include and guff) as this will just make TECH more difficult.
+
+- **Tech Stage**
+	- Configure the boilerplate before you start first with the config.php
+		- Add all database details
+		- Enable and disable on required constants
 
 ***Affinity New Media Bones Boilerplate Updates*** 
 
