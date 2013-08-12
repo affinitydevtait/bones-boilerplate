@@ -42,7 +42,7 @@ Depending on how to manage your development process, an ideal process would be a
 	- WP Members ( include custom functions in functions directory )
 	- WP Super Cache ( No caching will be available in v4.0 as a use of a CDN will be available )
 - New Packaged functions and structure
-	-Debugging. debug-functions.php - These query functions will display information at the bottom of the page
+	- Debugging
 		- ?debug=sql
 		- ?debug=phpinfo //displays only PHP Information
 		- ?debug=http
