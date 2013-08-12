@@ -1,0 +1,41 @@
+/* hide top menu */
+#wpadminbar {
+	display:none;
+}
+
+body.admin-bar #wphead, body.admin-bar #adminmenu {
+	padding-top:0;
+}
+
+/* hide created by WordPress msg */
+#footer-left {
+	display:none;
+}
+
+/* style footer stuff */
+#wlcms-footer-container {
+    line-height: 30px;
+    padding-top: 10px;
+}
+
+#wlcms-footer-container {
+    float: left;
+    margin-left: 15px;
+}
+
+#wlcms-footer-logo {
+    float: left;
+    padding-right: 10px;
+}
+
+body.admin-bar #wpcontent, body.admin-bar #adminmenu {
+    padding-top: 0px;
+}
+
+#footer-upgrade {
+	padding-top:15px;
+}
+
+html.wp-toolbar {
+    padding-top:0 !important;
+}

@@ -1,0 +1,184 @@
+/* Body */
+body.login {
+    min-width: 0;
+	background: #fff url('../img/background.jpg') top center no-repeat;
+	padding:30px 0 0 0;
+}
+
+
+.login-container {
+	background:#fff;
+	border: 1px solid #E5E5E5;
+    box-shadow: 0 4px 10px -1px rgba(200, 200, 200, 0.7);
+    font-weight: normal;
+    margin:0px;
+    padding: 30px 13px 13px 13px;
+	color:#6d6c6c;
+	font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Arial, Helvetica, sans-serif;
+}
+
+.login form {
+	background: none;
+    border:none;
+    box-shadow:none;
+    font-weight: normal;
+    margin:0;
+    padding:0;
+}
+
+.heading {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:22pt;
+	font-style:italic;
+	padding-bottom:20px;
+	color:#000;
+}
+
+.heading .red {
+	color:#e31736;
+}
+
+
+.login h1 a {
+	width: 365px;
+	height:68px;
+	background-image: url("../img/affinity-logo.png");
+	margin-bottom:50px;
+}
+
+#login_error, .message {
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+	border-top: 0 none;
+	margin-left: 0;
+	position: absolute;
+	top: 0;
+	left:40%;
+	width: 294px;
+}
+
+#login {
+	margin: 0 auto;
+    padding: 0;
+    width: 960px;
+}
+
+.left-col {
+	float:left; 
+	width:520px;
+	background: #fff url('../img/divider-300.jpg') top right no-repeat;
+	padding:15px;
+}
+
+.right-col {
+	float:right; 
+	width:360px;
+}
+
+	.red-text {
+		color:#d91331;
+		font-weight:bold;
+		font-size:12pt;
+		line-height:16pt;
+	}
+
+#backtoblog {
+	display:none;
+}
+
+.client-logo {
+	width:360px;
+	text-align:center;
+}
+
+
+.client-screenshot {
+	width:360px;
+	text-align:center;
+	margin-top:20px;
+}
+
+.client-screenshot img {
+	border:3px solid #d8d8d8;
+}
+
+.grey-footer {
+	background-color:#f8f8f8;
+	margin-top:20px;
+	padding:10px;
+}
+
+.grey-footer .title {
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.login form {
+	
+}
+.login form label {
+	text-shadow:0 1px 0 #FFF;
+}
+.login form .input {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border-color:#CCC;
+}
+.login form .input:hover {
+	border-color: #9BF;
+}
+.login form .input:focus {
+	border-color: #06C;
+	-moz-box-shadow: 0 0 6px rgba(0,100,200,0.25);
+	-webkit-box-shadow: 0 0 6px rgba(0,100,200,0.25);
+	box-shadow: 0 0 6px rgba(0,100,200,0.25);
+}
+#nav, #backtoblog {
+	margin: 0;
+	text-shadow: none;
+	text-align: center;
+	font-weight: bold;
+}
+.login #nav a, .login #backtoblog a {
+	color: #464646 !important;
+}
+#login:hover #nav a, #login:hover #backtoblog a {
+	color: #999 !important;
+}
+.login #nav a:hover, .login #backtoblog a:hover {
+	color: #FFF !important;
+}
+
+.login #nav, .login #backtoblog {
+    text-shadow:none; /* Override default */
+}
+
+.button-primary {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
