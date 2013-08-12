@@ -5,18 +5,22 @@
 	 */
 	function check_login_status(){
 
-		if ( is_user_logged_in() === FALSE ){
-			if( is_page('login') === FALSE ){
-				header('Location: ' . site_url('login') );
-			}
+		$userloggedin = is_user_logged_in();
+		
+		// If the user is not logged in and is trying to access a protected area
+		if ( $userloggedin === FALSE && is_page('login') === false ){ 
+			// redirect to the members loggin page
+			header('Location: ' . site_url('login') );
+			exit;
+			// if the user is logged in
 		}
-
-		if ( is_user_logged_in() === TRUE ){
-			if( is_page('membership') === FALSE ){
-				header('Location: ' . site_url('membership') );
-			}
-		}
-
+	}
+	
+	add_filter( 'wpmem_login_redirect', 'my_login_redirect' );
+	function my_login_redirect()
+	{
+		// return the url that the login should redirect to
+		return site_url('membership');
 	}
 	/**
 	 * @name display_login()
