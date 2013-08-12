@@ -35,8 +35,8 @@ Depending on how to manage your development process, an ideal process would be a
 		* @author Developer Name
 		* @return string
 		*/
-		*
-
+*
+-
 		- All new functions should be stored correctly
 		for example: If you create a bunch of new functions used by an area of the website, lets say "online store"
 		then create a "online-store-frunctions.php" in the functions directory and include it in the functions.php file.
