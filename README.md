@@ -1,11 +1,10 @@
 
 Development Standards Boilerplate
 =================
-Built around the HTML5 Boilerplate, the Affinity New Media is a rock to start from. Keep what you need, remove what you don't. It's totally up to you.
+Built around the HTML5 Boilerplate, the Affinity New Media Bones Boilerplate is a rock to start from. Keep what you need, remove what you don't. It's totally up to you.
 **The whole idea around this Boilerplate is to be consistent and tidy with development** and to have a framework style theme to start any new project with. So keep your code clean & tidy and place code into the correct areas of the boilerplate, see below for documentation.
  It's meant to be used as a per-project template, this means no Child Themes. Taking the Mobile-First approach is the way to go when building a responsive project. 
-So our boilerplate comes ready to roll with a unique LESS/Sass setup that serves minimal resources to smaller screens and scales up depending on your viewport. 
-As anyone who's ever browsed on a 3G connection will tell you, it's a difference maker.
+So our boilerplate comes ready to roll with a unique LESS/Sass setup that serves minimal resources to smaller screens and scales up depending on your viewport.
 
 ***Starting Your Project***
 
@@ -40,7 +39,8 @@ Depending on how to manage your development process, an ideal process would be a
 		* @return string
 		*/
 
-
+- **Post Tech Stage**
+	- Remove any plugins not being used
 
 ***Boilerplate Updates*** 
 
@@ -58,6 +58,7 @@ Depending on how to manage your development process, an ideal process would be a
 	- WP Members ( include custom functions in functions directory )
 	- WP Super Cache ( No caching will be available in v4.0 as a use of a CDN will be available )
 - New Packaged functions and structure
+
 	- Debugging
 		- ?debug=sql
 		- ?debug=phpinfo //displays only PHP Information
@@ -72,6 +73,7 @@ Depending on how to manage your development process, an ideal process would be a
 		- dump_trace()
 		- print_a()
 		- performance()
+
 	- Boilerplate Functions
 		- get_taxonomy_class()
 		- get_thumbnail_caption()
@@ -85,6 +87,21 @@ Depending on how to manage your development process, an ideal process would be a
 		- trim_text()
 		- current_url() //Deprecated with get_current_url() but still available
 		- limit_characters()
+
+	- Members Functions
+		- check_login_status
+		- display_login
+		- display_registration
+		- display_user_profile
+		- password_reset
+		- display_username
+		- display_user_interface
+		- userinfo
+		- get_profile_url
+		- get_register_url
+		- access_level
+		- remove_wpmem_txt (Bug Fix)	
+
 - Added new LESS elements and removed elements from _mixins.less
  * - .gradient()
  * - .bw-gradient()
@@ -108,6 +125,7 @@ Depending on how to manage your development process, an ideal process would be a
  * - .transparent()
  * - .desaturate()
  * - .saturate()
+- Bones ( Merged Version) - http://themble.com/bones/
 
 What is Bones
 =================

@@ -76,7 +76,7 @@ library/custom-post-type.php
 	- example custom taxonomy (like categories)
 	- example custom taxonomy (like tags)
 */
-require_once('library/custom-post-type.php'); // you can disable this if you like
+require_once('library/custom-post-types/custom-post-type.php'); // you can disable this if you like
 
 /*
 library/admin.php
@@ -104,7 +104,7 @@ require_once('library/functions/image-functions.php'); // you can disable this i
 library/functions/youtube-class.php
 	- adding support to grab youtube video screen shots and save in media library / attach to post ( fetch_youtube_image )
 */
-//require_once('library/functions/youtube-class.php'); // this comes turned off by default
+//require_once('library/class/youtube-class.php'); // this comes turned off by default
 
 /*
 custom-metaboxes-fields/metabox-functions.php (Added in version 2.1 boilerplate by Ryan@Affinity)
@@ -145,6 +145,12 @@ library/functions/bones-functions.php
 	- Native Bones Functions
 */
 require_once('library/functions/bones-functions.php'); 
+
+/*
+library/functions/members-functions.php
+	- Only to be used if WP Members is enabled / installed
+*/
+require_once('library/functions/members-functions.php'); 
 
 /*
 library/functions/custom-functions.php
