@@ -7,7 +7,21 @@ The whole idea around this Boilerplate was to be consistent with development and
 So our boilerplate comes ready to roll with a unique LESS/Sass setup that serves minimal resources to smaller screens and scales up depending on your viewport. 
 As anyone who's ever browsed on a 3G connection will tell you, it's a difference maker.
 
-Affinity New Media Bones Boilerplate
+*** Starting Your Project ***
+
+Depending on how to manage your development process, an ideal process would be as follows:
+
+- **Build Stage**
+	Create all your HTML and CSS. As The boilerplate is based on the HTML 5 Boilerplate
+	make sure that you use all HTML 5 elemnts and standards throughout your project.
+	For a reference you could use http://html5doctor.com
+
+	Also the Boilerplate uses LESS / SASS, we default to LESS, so all your default LESS
+	styling should only ever go in the _1030up.less the desktop only version of the website
+
+
+
+*** Affinity New Media Bones Boilerplate Updates *** 
 
 /* v3.01 update */
 - Added new LESS elements and removed elements from _mixins.less
