@@ -6,6 +6,8 @@ Built around the HTML5 Boilerplate, the Affinity New Media Bones Boilerplate is 
  It's meant to be used as a per-project template, this means no Child Themes. Taking the Mobile-First approach is the way to go when building a responsive project. 
 So our boilerplate comes ready to roll with a unique LESS/Sass setup that serves minimal resources to smaller screens and scales up depending on your viewport.
 
+!!! IF YOU HAVE ANYTHING TO ADD ADD IT OR LET ME KNOW !!!
+
 ***Starting Your Project***
 
 Depending on how to manage your development process, an ideal process would be as follows:
@@ -24,6 +26,7 @@ Depending on how to manage your development process, an ideal process would be a
 	- Configure the boilerplate before you start first with the config.php
 		- Add all database details
 		- Enable and disable on required constants
+	- Rename the "Bones" theme directory to "clients-name"
 	- All template files should be prefixed with template- (ex: template-homepage.php )
 	- All new functions should be stored correctly, for example: If you create a bunch of new functions used by an area of the website, lets say "online store" then create a "online-store-frunctions.php" in the functions directory and include it in the functions.php file.
 	- All new functions should be commented and documented in the following fashion
@@ -40,7 +43,10 @@ Depending on how to manage your development process, an ideal process would be a
 		*/
 
 - **Post Tech Stage**
-	- Remove any plugins not being used
+	- Remove any plugins not being used ( not just disable, delete the directory for the plugin )
+	- Disable the debug functions, do this by commenting out the functions file in functions.php
+	- Update Theme screenshot.png
+	- Generate favicon.ico (Find favicon.png for edit)
 
 ***Boilerplate Updates*** 
 
