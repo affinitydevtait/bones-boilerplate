@@ -1,7 +1,7 @@
 
 Development Standards Boilerplate
 =================
-Built around the HTML5 Boilerplate, the Affinity NEw MEdia is a rock to start from. Keep what you need, remove what you don't. It's totally up to you.
+Built around the HTML5 Boilerplate, the Affinity New Media is a rock to start from. Keep what you need, remove what you don't. It's totally up to you.
 **The whole idea around this Boilerplate is to be consistent and tidy with development** and to have a framework style theme to start any new project with. So keep your code clean & tidy and place code into the correct areas of the boilerplate, see below for documentation.
  It's meant to be used as a per-project template, this means no Child Themes. Taking the Mobile-First approach is the way to go when building a responsive project. 
 So our boilerplate comes ready to roll with a unique LESS/Sass setup that serves minimal resources to smaller screens and scales up depending on your viewport. 
@@ -29,8 +29,47 @@ Depending on how to manage your development process, an ideal process would be a
 ***Affinity New Media Bones Boilerplate Updates*** 
 
 /* v3.01 update */
+- Wordpress CMS 3.6 package
+- Included Plugins (Remove when not required)
+	- Advanced Custom Fields
+	- ACF Gallery
+	- ACF Options
+	- ACF Repeater
+	- Affinity New Media Admin ( Will be intergrated in the boilerplate in version 4.0)
+	- Gravity Forms
+	- Regenerate Thumbnails
+	- YOST Wordpress SEO
+	- WP Members ( include custom functions in functions directory )
+	- WP Super Cache ( No caching will be available in v4.0 as a use of a CDN will be available )
+- New Packaged functions and structure
+	-Debugging. debug-functions.php - These query functions will display information at the bottom of the page
+		- ?debug=sql
+		- ?debug=phpinfo //displays only PHP Information
+		- ?debug=http
+		- ?debug=cache
+		- ?debug=cron
+		- dump()
+		- add_stop()
+		- dump_stops()
+		- init_dump()
+		- dump_http()
+		- dump_trace()
+		- print_a()
+		- performance()
+	- Boilerplate Functions
+		- get_taxonomy_class()
+		- get_thumbnail_caption()
+		- get_current_url()
+		- get_current_term_ID()
+		- the_post_thumbnail_caption()
+		- int_to_str()
+		- the_date_from_string()
+		- get_shorter_excerpt()
+		- the_shorter_excerpt()
+		- trim_text()
+		- current_url() //Deprecated with get_current_url() but still available
+		- limit_characters()
 - Added new LESS elements and removed elements from _mixins.less
- * ADDED TO _elements.less
  * - .gradient()
  * - .bw-gradient()
  * - .bordered()
@@ -50,7 +89,6 @@ Depending on how to manage your development process, an ideal process would be a
  * - .columns()
  * - .translate()
  * - .background-clip()
- * ADDITIONS TO _elements.less
  * - .transparent()
  * - .desaturate()
  * - .saturate()
