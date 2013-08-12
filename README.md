@@ -7,7 +7,7 @@ The whole idea around this Boilerplate was to be consistent with development and
 So our boilerplate comes ready to roll with a unique LESS/Sass setup that serves minimal resources to smaller screens and scales up depending on your viewport. 
 As anyone who's ever browsed on a 3G connection will tell you, it's a difference maker.
 
-*** Starting Your Project ***
+***Starting Your Project***
 
 Depending on how to manage your development process, an ideal process would be as follows:
 
@@ -21,7 +21,7 @@ Depending on how to manage your development process, an ideal process would be a
 
 
 
-*** Affinity New Media Bones Boilerplate Updates *** 
+***Affinity New Media Bones Boilerplate Updates*** 
 
 /* v3.01 update */
 - Added new LESS elements and removed elements from _mixins.less
