@@ -26,8 +26,7 @@ Depending on how to manage your development process, an ideal process would be a
 		- Add all database details
 		- Enable and disable on required constants
 		- All new functions should be commented and documented in the following fashion
-*		
-	   /**
+*		/**
 		* @function get_taxonomy_class( $var )
 		* @param type $var
 		* @staticvar $term 
@@ -35,8 +34,8 @@ Depending on how to manage your development process, an ideal process would be a
 		* @see http://codex.wordpress.org/Function_Reference/get_queried_object
 		* @author Developer Name
 		* @return string
-		*/
-*
+		*/*
+
 
 All new functions should be stored correctly
 		for example: If you create a bunch of new functions used by an area of the website, lets say "online store"
