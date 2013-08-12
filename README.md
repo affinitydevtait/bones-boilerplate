@@ -25,6 +25,15 @@ Depending on how to manage your development process, an ideal process would be a
 	- Configure the boilerplate before you start first with the config.php
 		- Add all database details
 		- Enable and disable on required constants
+		- All new functions should be commented and documented in the following fashion
+		/**
+		* @function get_taxonomy_class( $var )
+		* @param type $var
+		* @staticvar $term 
+		*		@uses get_queried_object()
+		*		@see http://codex.wordpress.org/Function_Reference/get_queried_object
+		* @return string
+		*/
 
 ***Affinity New Media Bones Boilerplate Updates*** 
 
@@ -35,7 +44,7 @@ Depending on how to manage your development process, an ideal process would be a
 	- ACF Gallery
 	- ACF Options
 	- ACF Repeater
-	- Affinity New Media Admin ( Will be intergrated in the boilerplate in version 4.0)
+	- Affinity New Media Admin ( Will be integrated into the boilerplate in v4.0)
 	- Gravity Forms
 	- Regenerate Thumbnails
 	- YOST Wordpress SEO
